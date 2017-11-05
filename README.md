@@ -15,6 +15,7 @@ mysql     hard         nofile           65536
 tar xzvf mysql-5.6.38.tar.gz
 cd mysql-5.6.38
 
+编译参数
 cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \ 
 -DMYSQL_DATADIR=/usr/local/mysql/data \
 -DSYSCONFDIR=/etc \
