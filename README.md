@@ -39,3 +39,4 @@ cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
 
 php
 http://blog.csdn.net/u010861514/article/details/51926575
+http://blog.csdn.net/zero_295813128/article/details/51223209
