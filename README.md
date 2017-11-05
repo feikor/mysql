@@ -35,6 +35,7 @@ cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
 -DMYSQL_TCP_PORT=3306 \
 -DCOMPILATION_COMMENT="lq-edition" \
 -DENABLE_DTRACE=1 \
+-DWITH_SSL=yes \
 -DWITH_DEBUG=1
 
 php
