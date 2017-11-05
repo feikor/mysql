@@ -17,7 +17,7 @@ cd mysql-5.6.38
 
 编译参数
 cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \ 
--DMYSQL_DATADIR=/usr/local/mysql/data \
+-DMYSQL_DATADIR=/var/lib/mysql \
 -DSYSCONFDIR=/etc \
 -DWITH_INNOBASE_STORAGE_ENGINE=1 \
 -DWITH_ARCHIVE_STORAGE_ENGINE=1 \
