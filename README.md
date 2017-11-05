@@ -36,3 +36,6 @@ cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
 -DCOMPILATION_COMMENT="lq-edition" \
 -DENABLE_DTRACE=1 \
 -DWITH_DEBUG=1
+
+php
+http://blog.csdn.net/u010861514/article/details/51926575
