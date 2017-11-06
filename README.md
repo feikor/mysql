@@ -60,6 +60,7 @@ cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
 php
 http://blog.csdn.net/u010861514/article/details/51926575
 http://blog.csdn.net/zero_295813128/article/details/51223209
+https://cloud.tencent.com/document/product/236/3130
 
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
@@ -179,5 +180,6 @@ MySQL问题解决：-bash:mysql:command not found
    解决办法是：  
  ln -s /usr/local/mysql/bin/mysql /usr/bin　做个链接即可
 
+https://cloud.tencent.com/document/product/236/3130
 
 
