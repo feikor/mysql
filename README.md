@@ -91,6 +91,7 @@ mkdir -p /data/mysqldb
 四、下载MySQL源码包并解压
 从http://dev.mysql.com/downloads/mysql/直接下载源码，解压mysql-5.6.16.tar.gz
 wget http://dev.mysql.com/downloads/mysql/mysql-5.6.16.tar.gz  
+https://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz
 tar -zxv -f mysql-5.6.16.tar.gz  
 cd mysql-5.6.16 
 
