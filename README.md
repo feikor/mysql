@@ -108,7 +108,10 @@ vim /etc/profile
 source /etc/profile  
 
 十、启动mysql服务并加入开机自启动(可选这个步骤，以后可以自己启动的)
-service mysqld start 
+service mysqld start
+
+chkconfig --add mysqld
+chkconfig mysqld on
 
 十一、检查mysql服务是否启动
 netstat -tulnp | grep 3306   
