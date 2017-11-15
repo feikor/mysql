@@ -29,7 +29,7 @@ tar zxvf mysql-5.6.36.tar.gz
 cd mysql-5.6.36
 cmake
 -DCMAKE_INSTALL_PREFIX=/usr/local/mysql               #安装目录
--DMYSQL_DATADIR=/data/mysql/data                      #数据库存放目录
+-DMYSQL_DATADIR=/data/mysqldata/3306                  #数据库存放目录
 -DSYSCONFDIR=/etc                                     #系统配置目录
 -DMYSQL_UNIX_ADDR=/usr/local/mysql/data/mysql.sock    #Unix中socket文件路径
 -DWITH_MYISAM_STORAGE_ENGINE=1                        #安装 myisam 存储引擎
@@ -50,7 +50,7 @@ cmake
 --------------------------------------------------------------------
 cmake
 -DCMAKE_INSTALL_PREFIX=/usr/local/mysql
--DMYSQL_DATADIR=/data/mysql/data 
+-DMYSQL_DATADIR=/data/mysqldata/3306 
 -DSYSCONFDIR=/etc 
 -DMYSQL_UNIX_ADDR=/usr/local/mysql/data/mysql.sock 
 -DWITH_MYISAM_STORAGE_ENGINE=1   
@@ -73,7 +73,8 @@ cmake
 
 
 下面可以直接复制到linux中执行
-cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysql/data  -DSYSCONFDIR=/etc -DMYSQL_UNIX_ADDR=/usr/local/mysql/data/mysql.sock -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_BLACKHOLE_STORAGE_ENGINE=1 -DWITH_MEMORY_STORAGE_ENGINE=1 -DWITH_PARTITION_STORAGE_ENGINE=1 -DENABLED_LOCAL_INFILE=1 -DWITH_READLINE=1 -DWITH_SSL=system -DWITH_ZLIB=system -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DEXTRA_CHARSETS=all -DMYSQL_TCP_PORT=3306 
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysqldata/3306 -DSYSCONFDIR=/etc -DMYSQL_UNIX_ADDR=/usr/local/mysql/data/mysql.sock -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_BLACKHOLE_STORAGE_ENGINE=1 -DWITH_MEMORY_STORAGE_ENGINE=1 -DWITH_PARTITION_STORAGE_ENGINE=1 -DENABLED_LOCAL_INFILE=1 -DWITH_READLINE=1 -DWITH_SSL=system -DWITH_ZLIB=system -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DEXTRA_CHARSETS=all -DMYSQL_TCP_PORT=3306 
+
 
 
 
