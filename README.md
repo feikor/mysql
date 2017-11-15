@@ -24,4 +24,57 @@ cd /usr/local/src
 搜狐镜像下载
 wget -c http://mirrors.sohu.com/mysql/MySQL-5.6/mysql-5.6.36.tar.gz
 
+五：安装
+tar zxvf mysql-5.6.36.tar.gz
+cd mysql-5.6.36
+cmake
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql               #安装目录
+-DMYSQL_DATADIR=/data/mysql/data                      #数据库存放目录
+-DSYSCONFDIR=/etc                                     #系统配置目录
+-DMYSQL_UNIX_ADDR=/usr/local/mysql/data/mysql.sock    #Unix中socket文件路径
+-DWITH_MYISAM_STORAGE_ENGINE=1                        #安装 myisam 存储引擎
+-DWITH_INNOBASE_STORAGE_ENGINE=1                      #安装 innodb 存储引擎
+-DWITH_ARCHIVE_STORAGE_ENGINE=1                       #安装 archive 存储引擎
+-DWITH_BLACKHOLE_STORAGE_ENGINE=1                     #安装 blackhole 存储引擎
+-DWITH_MEMORY_STORAGE_ENGINE=1                        #安装 blackhole 存储引擎
+-DWITH_PARTITION_STORAGE_ENGINE=1                     #安装数据库分区
+-DENABLED_LOCAL_INFILE=1                              #允许从本地导入数据
+-DWITH_READLINE=1                                     #快捷键功能readline库支持（提供可编辑的命令行）
+-DWITH_SSL=system                                     #启用ssl库支持（安全套接层）
+-DWITH_ZLIB=system                                    #启用libz库支持（zib、gzib相关
+-DDEFAULT_CHARSET=utf8                                #使用 utf8 字符
+-DDEFAULT_COLLATION=utf8_general_ci                   #校验字符
+-DEXTRA_CHARSETS=all                                  #安装所有扩展字符集
+-DMYSQL_TCP_PORT=3306                                 #MySQL 监听端口
+
+--------------------------------------------------------------------
+cmake
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql
+-DMYSQL_DATADIR=/data/mysql/data 
+-DSYSCONFDIR=/etc 
+-DMYSQL_UNIX_ADDR=/usr/local/mysql/data/mysql.sock 
+-DWITH_MYISAM_STORAGE_ENGINE=1   
+-DWITH_INNOBASE_STORAGE_ENGINE=1  
+-DWITH_ARCHIVE_STORAGE_ENGINE=1  
+-DWITH_BLACKHOLE_STORAGE_ENGINE=1 
+-DWITH_MEMORY_STORAGE_ENGINE=1  
+-DWITH_PARTITION_STORAGE_ENGINE=1  
+-DENABLED_LOCAL_INFILE=1  
+-DWITH_READLINE=1 
+-DWITH_SSL=system 
+-DWITH_ZLIB=system 
+-DDEFAULT_CHARSET=utf8 
+-DDEFAULT_COLLATION=utf8_general_ci  
+-DEXTRA_CHARSETS=all  
+-DMYSQL_TCP_PORT=3306  
+
+-DWITH_SSL=yes                                        #支持 SSL
+--------------------------------------------------------------------
+
+
+下面可以直接复制到linux中执行
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysqldata/3306 -DSYSCONFDIR=/etc -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_MEMORY_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DMYSQL_UNIX_ADDR=/usr/local/mysql/data/mysql.sock  -DMYSQL_TCP_PORT=3306 -DENABLED_LOCAL_INFILE=1 -DWITH_PARTITION_STORAGE_ENGINE=1 -DEXTRA_CHARSETS=all -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci
+
+
+
 
