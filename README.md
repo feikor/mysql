@@ -131,6 +131,13 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password' WITH G
 FLUSH PRIVILEGES;
 红色的password为远程访问时，root用户的密码，可以和本地不同。
 
+十三、配置防火墙
+默认防火墙的3306端口默认没有开启，若要远程访问，需要开启这个端口
+vim /etc/sysconfig/iptables
+在“-A INPUT –m state --state NEW –m tcp –p –dport 22 –j ACCEPT”，下添加：
+-A INPUT -m state --state NEW -m tcp -p -dport 3306 -j ACCEPT
+然后保存，并关闭该文件，在终端内运行下面的命令，刷新防火墙配置：
+service iptables restart
 
 
 
