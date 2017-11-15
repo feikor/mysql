@@ -1,4 +1,4 @@
-Mysql安装
+Mysql安装（阿里云centos6.8下）
 
 一：卸载旧版本
 rpm -qa | grep mysql
