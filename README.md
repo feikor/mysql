@@ -5,7 +5,7 @@ rpm -qa | grep mysql
 rpm -e mysql #普通删除模式 
 rpm -e --nodeps xxx（xxx为刚才的显示的列表） # 强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行强力删除
 rm /etc/my.cnf #删除/etc/my.cnf (可以不删，后面覆盖就行)
-
+rpm -e --nodeps mysql-libs-5.1.73-8.el6_8.x86_64
 
 二：安装编译代码需要的包
 yum -y install make gcc gcc-c++ cmake bison-devel ncurses ncurses-devel perl openssl openssl-devel 
